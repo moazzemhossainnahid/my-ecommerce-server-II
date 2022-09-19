@@ -30,8 +30,7 @@ const verifyToken = (req, res, next) => {
 
 
 
-const uri = "mongodb+srv://MyEcommerce:VNOWeYTYMXxnEwyE@cluster0.wlhaaxa.mongodb.net/?retryWrites=true&w=majority";
-// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.wlhaaxa.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.wlhaaxa.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
@@ -160,4 +159,6 @@ app.get('/', (req, res) => {
 });
 app.listen(port, () => {
     console.log("Listen to Port", port);
+    // MyEcommerce
+    // VNOWeYTYMXxnEwyE
 });
